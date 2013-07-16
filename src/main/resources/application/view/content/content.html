@@ -1,0 +1,9 @@
+<div class="content-partial"
+     ng-controller="view.ContentController as content">
+    <div class="header">
+        <span>Expression</span>
+        <input ng-model="expression">
+    </div>
+    <input ng-repeat="number in content.numbers | numericExpressionAsync : expression"
+           ng-model="number">
+</div>
